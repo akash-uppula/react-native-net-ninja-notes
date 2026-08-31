@@ -65,9 +65,9 @@ Basic configuration:
 ```tsx
 import "react-native-url-polyfill/auto";
 
-import { Client, Account } from "react-native-appwrite";
+import { Client, Account, Avatars, ID } from "react-native-appwrite";
 
-const client = new Client();
+export const client = new Client();
 
 client
   .setEndpoint("https://cloud.appwrite.io/v1")
@@ -75,6 +75,9 @@ client
   .setPlatform("YOUR_ANDROID_PACKAGE_NAME");
 
 export const account = new Account(client);
+export const avatars = new Avatars(client);
+
+export { ID };
 ```
 
 This file creates the connection between:
